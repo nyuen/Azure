@@ -6,8 +6,8 @@ The Azure Load Balancer is assigned a static IP in the Virtual Network and is co
 
 Steps to deploy manually
 
-Create a resource group: New-AzureResourceGroup -Name "ILB-DemoRG" -Location "West US"
+Create a resource group: New-AzureRMResourceGroup -Name "ILB-DemoRG" -Location "West Europe"
 
 Modify the 2VMsinVnetWithILB-parameters file to update your subscriptionId and change naming convention
 
-Deploy: New-AzureResourceGroupDeployment –Name IPDep1 -ResourceGroupName ILB-DemoRG -TemplateFile 2VMsinVnetWithILB.json -TemplateParameterFile 2VMsinVnetWithILB-parameters.json
+Deploy: New-AzureRMResourceGroupDeployment –Name IPDep1 -ResourceGroupName ILB-DemoRG -TemplateFile 2VMsinVnetWithILB.json -TemplateParameterFile 2VMsinVnetWithILB-parameters.json
