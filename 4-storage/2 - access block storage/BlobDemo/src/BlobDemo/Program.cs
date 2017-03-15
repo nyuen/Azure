@@ -12,7 +12,6 @@ namespace BlobDemo
         {
             BlopOps blobOps = new BlopOps();
             blobOps.BasicBlobOps();
-            blobOps.DownloadBlob();
         }
     }
 }
