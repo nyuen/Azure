@@ -11,7 +11,7 @@ namespace QueueStorage
     {
 
         string storageAccountName = "azureenablement";
-        string storageAccountKey = "CQyibzFhGKmzu+IGALo/+jQQcquZwf0rvxwm/v/xYwuQ+zg08O5NmZBTjwqnfVtumHSMB+9FTTQUIACFspHLow==";
+        string storageAccountKey = "ACCESSKEY";
         string queueName = "testqueue";
         //set the invisibility time to 10 seconds
         int queueMessageInvisibilityTime = 10;
