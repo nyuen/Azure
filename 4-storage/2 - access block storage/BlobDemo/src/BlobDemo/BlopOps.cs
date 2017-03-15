@@ -13,7 +13,7 @@ namespace BlobDemo
     public class BlopOps
     {
         const string storageAccountName = "azureenablement";
-        const string storageAccountKey = "CQyibzFhGKmzu+IGALo/+jQQcquZwf0rvxwm/v/xYwuQ+zg08O5NmZBTjwqnfVtumHSMB+9FTTQUIACFspHLow==";
+        const string storageAccountKey = "STORAGEKEY";
         string containerName = "blobops";
         const string localPicsToUploadPath = @"C:\AzureDemo";
         const string pseudoFolder = "images/";
