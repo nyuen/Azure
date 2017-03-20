@@ -1,0 +1,90 @@
+﻿********** 7/3/2015 9:10:24 PM **********
+Exception Type: System.Net.WebException
+Exception: The remote server returned an error: (401) Unauthorized.
+Source: CheckoutController.cs Review Action
+Stack Trace: 
+   at System.Net.HttpWebRequest.GetResponse()
+   at NVPAPICaller.HttpCall(String NvpRequest) in c:\Dropbox\Projects\AppvNext\Solliance\Contoso.Apps.SportsLeague\Contoso.Apps.SportsLeague\Helpers\PaymentGatewayFunctions.cs:line 173
+   at NVPAPICaller.DoCheckoutAuth(OrderViewModel order, String& token, NVPCodec& decoder) in c:\Dropbox\Projects\AppvNext\Solliance\Contoso.Apps.SportsLeague\Contoso.Apps.SportsLeague\Helpers\PaymentGatewayFunctions.cs:line 92
+   at Contoso.Apps.SportsLeague.Web.Controllers.CheckoutController.Review(CheckoutViewModel data) in c:\Dropbox\Projects\AppvNext\Solliance\Contoso.Apps.SportsLeague\Contoso.Apps.SportsLeague\Controllers\CheckoutController.cs:line 77
+
+********** 7/3/2015 10:29:37 PM **********
+Exception Type: System.Net.WebException
+Exception: The operation has timed out
+Source: CheckoutController.cs Complete Action
+Stack Trace: 
+   at System.Net.HttpWebRequest.GetResponse()
+   at NVPAPICaller.HttpCall(String NvpRequest) in c:\Dropbox\Projects\AppvNext\Solliance\Contoso.Apps.SportsLeague\Contoso.Apps.SportsLeague\Helpers\PaymentGatewayFunctions.cs:line 173
+   at NVPAPICaller.DoCheckoutPayment(String finalPaymentAmount, String token, NVPCodec& decoder) in c:\Dropbox\Projects\AppvNext\Solliance\Contoso.Apps.SportsLeague\Contoso.Apps.SportsLeague\Helpers\PaymentGatewayFunctions.cs:line 131
+   at Contoso.Apps.SportsLeague.Web.Controllers.CheckoutController.Complete(OrderViewModel order) in c:\Dropbox\Projects\AppvNext\Solliance\Contoso.Apps.SportsLeague\Contoso.Apps.SportsLeague\Controllers\CheckoutController.cs:line 183
+
+********** 7/3/2015 10:33:47 PM **********
+Exception Type: System.Net.WebException
+Exception: The remote server returned an error: (409) Conflict.
+Source: CheckoutController.cs Complete Action
+Stack Trace: 
+   at System.Net.HttpWebRequest.GetResponse()
+   at NVPAPICaller.HttpCall(String NvpRequest) in c:\Dropbox\Projects\AppvNext\Solliance\Contoso.Apps.SportsLeague\Contoso.Apps.SportsLeague\Helpers\PaymentGatewayFunctions.cs:line 173
+   at NVPAPICaller.DoCheckoutPayment(String finalPaymentAmount, String token, NVPCodec& decoder) in c:\Dropbox\Projects\AppvNext\Solliance\Contoso.Apps.SportsLeague\Contoso.Apps.SportsLeague\Helpers\PaymentGatewayFunctions.cs:line 131
+   at Contoso.Apps.SportsLeague.Web.Controllers.CheckoutController.Complete(OrderViewModel order) in c:\Dropbox\Projects\AppvNext\Solliance\Contoso.Apps.SportsLeague\Contoso.Apps.SportsLeague\Controllers\CheckoutController.cs:line 183
+
+********** 7/3/2015 10:41:38 PM **********
+Exception Type: System.Net.WebException
+Exception: The remote server returned an error: (409) Conflict.
+Source: CheckoutController.cs Complete Action
+Stack Trace: 
+   at System.Net.HttpWebRequest.GetResponse()
+   at NVPAPICaller.HttpCall(String NvpRequest) in c:\Dropbox\Projects\AppvNext\Solliance\Contoso.Apps.SportsLeague\Contoso.Apps.SportsLeague\Helpers\PaymentGatewayFunctions.cs:line 173
+   at NVPAPICaller.DoCheckoutPayment(String finalPaymentAmount, String token, NVPCodec& decoder) in c:\Dropbox\Projects\AppvNext\Solliance\Contoso.Apps.SportsLeague\Contoso.Apps.SportsLeague\Helpers\PaymentGatewayFunctions.cs:line 131
+   at Contoso.Apps.SportsLeague.Web.Controllers.CheckoutController.Complete(OrderViewModel order) in c:\Dropbox\Projects\AppvNext\Solliance\Contoso.Apps.SportsLeague\Contoso.Apps.SportsLeague\Controllers\CheckoutController.cs:line 183
+
+********** 7/3/2015 10:49:31 PM **********
+Exception Type: System.Net.WebException
+Exception: The remote server returned an error: (409) Conflict.
+Source: CheckoutController.cs Complete Action
+Stack Trace: 
+   at System.Net.HttpWebRequest.GetResponse()
+   at NVPAPICaller.HttpCall(String NvpRequest) in c:\Dropbox\Projects\AppvNext\Solliance\Contoso.Apps.SportsLeague\Contoso.Apps.SportsLeague\Helpers\PaymentGatewayFunctions.cs:line 173
+   at NVPAPICaller.DoCheckoutPayment(String finalPaymentAmount, String token, NVPCodec& decoder) in c:\Dropbox\Projects\AppvNext\Solliance\Contoso.Apps.SportsLeague\Contoso.Apps.SportsLeague\Helpers\PaymentGatewayFunctions.cs:line 131
+   at Contoso.Apps.SportsLeague.Web.Controllers.CheckoutController.Complete(OrderViewModel order) in c:\Dropbox\Projects\AppvNext\Solliance\Contoso.Apps.SportsLeague\Contoso.Apps.SportsLeague\Controllers\CheckoutController.cs:line 183
+
+********** 7/3/2015 10:55:40 PM **********
+Exception Type: System.Net.WebException
+Exception: The remote server returned an error: (409) Conflict.
+Source: CheckoutController.cs Review Action
+Stack Trace: 
+   at System.Net.HttpWebRequest.GetResponse()
+   at NVPAPICaller.HttpCall(String NvpRequest) in c:\Dropbox\Projects\AppvNext\Solliance\Contoso.Apps.SportsLeague\Contoso.Apps.SportsLeague\Helpers\PaymentGatewayFunctions.cs:line 173
+   at NVPAPICaller.DoCheckoutAuth(OrderViewModel order, String& token, NVPCodec& decoder) in c:\Dropbox\Projects\AppvNext\Solliance\Contoso.Apps.SportsLeague\Contoso.Apps.SportsLeague\Helpers\PaymentGatewayFunctions.cs:line 92
+   at Contoso.Apps.SportsLeague.Web.Controllers.CheckoutController.Review(CheckoutViewModel data) in c:\Dropbox\Projects\AppvNext\Solliance\Contoso.Apps.SportsLeague\Contoso.Apps.SportsLeague\Controllers\CheckoutController.cs:line 77
+
+********** 7/3/2015 10:56:45 PM **********
+Exception Type: System.Net.WebException
+Exception: The remote server returned an error: (409) Conflict.
+Source: CheckoutController.cs Complete Action
+Stack Trace: 
+   at System.Net.HttpWebRequest.GetResponse()
+   at NVPAPICaller.HttpCall(String NvpRequest) in c:\Dropbox\Projects\AppvNext\Solliance\Contoso.Apps.SportsLeague\Contoso.Apps.SportsLeague\Helpers\PaymentGatewayFunctions.cs:line 173
+   at NVPAPICaller.DoCheckoutPayment(String finalPaymentAmount, String token, NVPCodec& decoder) in c:\Dropbox\Projects\AppvNext\Solliance\Contoso.Apps.SportsLeague\Contoso.Apps.SportsLeague\Helpers\PaymentGatewayFunctions.cs:line 131
+   at Contoso.Apps.SportsLeague.Web.Controllers.CheckoutController.Complete(OrderViewModel order) in c:\Dropbox\Projects\AppvNext\Solliance\Contoso.Apps.SportsLeague\Contoso.Apps.SportsLeague\Controllers\CheckoutController.cs:line 183
+
+********** 7/3/2015 11:06:13 PM **********
+Exception Type: System.Net.WebException
+Exception: The remote server returned an error: (409) Conflict.
+Source: CheckoutController.cs Complete Action
+Stack Trace: 
+   at System.Net.HttpWebRequest.GetResponse()
+   at NVPAPICaller.HttpCall(String NvpRequest) in c:\Dropbox\Projects\AppvNext\Solliance\Contoso.Apps.SportsLeague\Contoso.Apps.SportsLeague\Helpers\PaymentGatewayFunctions.cs:line 173
+   at NVPAPICaller.DoCheckoutPayment(String finalPaymentAmount, String token, NVPCodec& decoder) in c:\Dropbox\Projects\AppvNext\Solliance\Contoso.Apps.SportsLeague\Contoso.Apps.SportsLeague\Helpers\PaymentGatewayFunctions.cs:line 131
+   at Contoso.Apps.SportsLeague.Web.Controllers.CheckoutController.Complete(OrderViewModel order) in c:\Dropbox\Projects\AppvNext\Solliance\Contoso.Apps.SportsLeague\Contoso.Apps.SportsLeague\Controllers\CheckoutController.cs:line 201
+
+********** 7/5/2015 4:12:43 PM **********
+Exception Type: System.Net.WebException
+Exception: The operation has timed out
+Source: CheckoutController.cs Complete Action
+Stack Trace: 
+   at System.Net.HttpWebRequest.GetResponse()
+   at NVPAPICaller.HttpCall(String NvpRequest) in c:\Dropbox\Projects\AppvNext\Solliance\Contoso.Apps.SportsLeague\Contoso.Apps.SportsLeague\Helpers\PaymentGatewayFunctions.cs:line 173
+   at NVPAPICaller.DoCheckoutAuth(OrderViewModel order, String& token, NVPCodec& decoder) in c:\Dropbox\Projects\AppvNext\Solliance\Contoso.Apps.SportsLeague\Contoso.Apps.SportsLeague\Helpers\PaymentGatewayFunctions.cs:line 92
+   at Contoso.Apps.SportsLeague.Web.Controllers.CheckoutController.Review(CheckoutViewModel data) in c:\Dropbox\Projects\AppvNext\Solliance\Contoso.Apps.SportsLeague\Contoso.Apps.SportsLeague\Controllers\CheckoutController.cs:line 77
+

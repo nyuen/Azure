@@ -1,0 +1,97 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{DBDBBBA2-A33D-4E21-B37E-99775CCBE570}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\AzureWebsitePublishModule.psm1 = PublishScripts\AzureWebsitePublishModule.psm1
+		PublishScripts\Publish-WebApplicationWebsite.ps1 = PublishScripts\Publish-WebApplicationWebsite.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{B3162E78-DC75-4505-83D2-D77FFD6011F3}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Configurations\ContosoAppsPaymentGateway-WAWS-dev.json = PublishScripts\Configurations\ContosoAppsPaymentGateway-WAWS-dev.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{64037FD7-2047-4CD1-8A7D-E75C894FF675}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APIs", "APIs", "{5A971972-BB4F-4B1F-928D-4F7F96A8602C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{C4851AE4-C255-4EBF-B976-F50B39EC7C8C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{83E0346C-41AA-40D6-87F1-2275C7CD0633}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{32D8B886-609D-4E0E-AF55-768A3278BAAF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{4DB82D73-8523-46F7-9928-9AE1380A8F1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contoso.Apps.SportsLeague.Web", "Contoso.Apps.SportsLeague\Contoso.Apps.SportsLeague.Web.csproj", "{1B1BCCD2-5BF1-4281-8BE2-5097E53F3642}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contoso.Apps.SportsLeague.Data", "Contoso.Apps.SportsLeague.Data\Contoso.Apps.SportsLeague.Data.csproj", "{B74E00B2-7568-4990-81F8-B54AA6751600}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contoso.Apps.PaymentGateway", "Contoso.Apps.PaymentGateway\Contoso.Apps.PaymentGateway.csproj", "{3C90ED99-50CE-41CE-A02A-31873D42753B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contoso.Apps.Common", "Contoso.Apps.Common\Contoso.Apps.Common.csproj", "{3FF97305-2331-4E46-8D0F-C3E3BBD372F2}"
+EndProject
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "Contoso.Apps.SportsLeague.WorkerRoleService", "Contoso.Apps.SportsLeague.WorkerRole\Contoso.Apps.SportsLeague.WorkerRoleService.ccproj", "{B67EF793-1326-46AB-9CD8-07FFCD99B663}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contoso.Apps.SportsLeague.WorkerRole", "ContosoSportsLeageWorkerRole\Contoso.Apps.SportsLeague.WorkerRole.csproj", "{4BC20FCC-2C45-4134-843A-6BA77823AD69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contoso.Apps.SportsLeague.Offers", "Contoso.Apps.SportsLeague.Offers\Contoso.Apps.SportsLeague.Offers.csproj", "{828E0A97-01FC-4B5B-9721-42D95413A4B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contoso.Apps.SportsLeague.Admin", "Contoso.Apps.SportsLeague.Admin\Contoso.Apps.SportsLeague.Admin.csproj", "{004842AE-0F56-4CA2-9257-370B742D2BD4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B1BCCD2-5BF1-4281-8BE2-5097E53F3642}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B1BCCD2-5BF1-4281-8BE2-5097E53F3642}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B1BCCD2-5BF1-4281-8BE2-5097E53F3642}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B1BCCD2-5BF1-4281-8BE2-5097E53F3642}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B74E00B2-7568-4990-81F8-B54AA6751600}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B74E00B2-7568-4990-81F8-B54AA6751600}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B74E00B2-7568-4990-81F8-B54AA6751600}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B74E00B2-7568-4990-81F8-B54AA6751600}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C90ED99-50CE-41CE-A02A-31873D42753B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C90ED99-50CE-41CE-A02A-31873D42753B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C90ED99-50CE-41CE-A02A-31873D42753B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C90ED99-50CE-41CE-A02A-31873D42753B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FF97305-2331-4E46-8D0F-C3E3BBD372F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FF97305-2331-4E46-8D0F-C3E3BBD372F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FF97305-2331-4E46-8D0F-C3E3BBD372F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FF97305-2331-4E46-8D0F-C3E3BBD372F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B67EF793-1326-46AB-9CD8-07FFCD99B663}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B67EF793-1326-46AB-9CD8-07FFCD99B663}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B67EF793-1326-46AB-9CD8-07FFCD99B663}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B67EF793-1326-46AB-9CD8-07FFCD99B663}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BC20FCC-2C45-4134-843A-6BA77823AD69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BC20FCC-2C45-4134-843A-6BA77823AD69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BC20FCC-2C45-4134-843A-6BA77823AD69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BC20FCC-2C45-4134-843A-6BA77823AD69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{828E0A97-01FC-4B5B-9721-42D95413A4B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{828E0A97-01FC-4B5B-9721-42D95413A4B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{828E0A97-01FC-4B5B-9721-42D95413A4B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{828E0A97-01FC-4B5B-9721-42D95413A4B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{004842AE-0F56-4CA2-9257-370B742D2BD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{004842AE-0F56-4CA2-9257-370B742D2BD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{004842AE-0F56-4CA2-9257-370B742D2BD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{004842AE-0F56-4CA2-9257-370B742D2BD4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B3162E78-DC75-4505-83D2-D77FFD6011F3} = {DBDBBBA2-A33D-4E21-B37E-99775CCBE570}
+		{1B1BCCD2-5BF1-4281-8BE2-5097E53F3642} = {C4851AE4-C255-4EBF-B976-F50B39EC7C8C}
+		{B74E00B2-7568-4990-81F8-B54AA6751600} = {64037FD7-2047-4CD1-8A7D-E75C894FF675}
+		{3C90ED99-50CE-41CE-A02A-31873D42753B} = {5A971972-BB4F-4B1F-928D-4F7F96A8602C}
+		{3FF97305-2331-4E46-8D0F-C3E3BBD372F2} = {64037FD7-2047-4CD1-8A7D-E75C894FF675}
+		{B67EF793-1326-46AB-9CD8-07FFCD99B663} = {83E0346C-41AA-40D6-87F1-2275C7CD0633}
+		{4BC20FCC-2C45-4134-843A-6BA77823AD69} = {83E0346C-41AA-40D6-87F1-2275C7CD0633}
+		{828E0A97-01FC-4B5B-9721-42D95413A4B0} = {5A971972-BB4F-4B1F-928D-4F7F96A8602C}
+		{004842AE-0F56-4CA2-9257-370B742D2BD4} = {C4851AE4-C255-4EBF-B976-F50B39EC7C8C}
+	EndGlobalSection
+EndGlobal
