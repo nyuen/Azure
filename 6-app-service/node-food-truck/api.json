@@ -1,0 +1,99 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"version": "v1",
+		"title": "FoodTrucks",
+    "description": "An TryApp sample API App where you can find Food trucks."
+	},
+	"host": "microsoft-apiapp1fe6951749ff4b76b8cc9194bc29ba61.azurewebsites.net:443",
+	"schemes": ["http", "https"],
+  "basePath": "/api/data",
+	"paths": {
+		"/foodtrucks": {
+			"get": {
+				"tags": ["FoodTrucks"],
+				"operationId": "getFoodTrucks",
+				"consumes": [],
+				"produces": ["application/json",
+				"text/json",
+				"application/xml",
+				"text/xml"],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/Restaurant"
+							}
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/foodtrucks/{id}": {
+			"get": {
+				"tags": ["FoodTrucks"],
+				"operationId": "getFoodTruckDetails",
+				"consumes": [],
+				"produces": ["application/json",
+				"text/json",
+				"application/xml",
+				"text/xml"],
+				"parameters": [{
+					"name": "id",
+					"in": "path",
+					"required": true,
+					"type": "integer",
+					"format": "int32"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/Restaurant"
+							}
+						}
+					}
+				},
+				"deprecated": false
+			}
+		}
+	},
+	"definitions": {
+		"Restaurant": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"name": {
+					"type": "string"
+				},
+				"likes": {
+					"format": "int32",
+					"type": "integer"
+				},
+				"savory": {
+					"type": "boolean"
+				},
+				"sweet": {
+					"type": "boolean"
+				},
+				"vegetarian": {
+					"type": "boolean"
+				},
+				"bookable": {
+					"type": "boolean"
+				},
+				"city": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}
