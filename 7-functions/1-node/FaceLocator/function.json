@@ -5,13 +5,13 @@
       "name": "image",
       "path": "images/{name}.jpg",
       "dataType": "binary",
-      "connection": "AzureWebJobsDashboard",
+      "connection": "niyuenbatch_STORAGE",
       "direction": "in"
     },
     {
       "type": "table",
       "name": "outTable",
-      "tableName": "faceRectangle",
+      "tableName": "faceLocator",
       "connection": "AzureWebJobsDashboard",
       "direction": "out"
     }

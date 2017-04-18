@@ -13,8 +13,10 @@ var guid = require('node-uuid');
 module.exports = function (context, image) {
 
     context.log("Image Size:", image.length);
+    var propertiesObject = { returnFaceAttributes:'age,gender,smile,glasses,emotion' };
     var options = {
-        uri: "https://api.projectoxford.ai/vision/v1.0/analyze?visualFeatures=Faces",
+        uri: "https://westus.api.cognitive.microsoft.com/face/v1.0/detect",
+        qs:propertiesObject,
         method: 'POST',
         body: image,
         headers: {
@@ -27,18 +29,18 @@ module.exports = function (context, image) {
         .then((response) => {
             response = JSON.parse(response);
 
-            if (!response || !response.faces.length) {
+            if (!response) {
                 return context.done();
             }
-
             context.log("From Vision Api:", response);
 
-            context.bindings.outTable = response.faces.map((face) => {
+            context.bindings.outTable = response.map((face) => {
                 var faceMapping = {
-                    rowKey: guid.v1(),
+                    rowKey: face.faceId,
                     imageFile: context.bindingData.name + ".jpg",
                     partitionKey: "Functions"
                 };
+                Object.assign(faceMapping, face.faceRectangle);
                 Object.assign(faceMapping, face.faceRectangle);
                 return faceMapping;
             });
