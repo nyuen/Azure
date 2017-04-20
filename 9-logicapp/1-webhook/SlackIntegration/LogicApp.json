@@ -1,0 +1,279 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "logicAppName": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 80,
+      "metadata": {
+        "description": "Name of the Logic App."
+      }
+    },
+    "logicAppLocation": {
+      "type": "string",
+      "defaultValue": "westeurope",
+      "allowedValues": [
+        "eastasia",
+        "southeastasia",
+        "centralus",
+        "eastus",
+        "eastus2",
+        "westus",
+        "northcentralus",
+        "southcentralus",
+        "northeurope",
+        "westeurope",
+        "japanwest",
+        "japaneast",
+        "brazilsouth",
+        "australiaeast",
+        "australiasoutheast",
+        "southindia",
+        "centralindia",
+        "westindia",
+        "canadacentral",
+        "canadaeast",
+        "westcentralus",
+        "westus2",
+        "[resourceGroup().location]"
+      ],
+      "metadata": {
+        "description": "Location of the Logic App."
+      }
+    },
+    "slack_1_Connection_Name": {
+      "type": "string",
+      "defaultValue": "slack-1"
+    },
+    "slack_1_Connection_DisplayName": {
+      "type": "string",
+      "defaultValue": ""
+    }
+  },
+  "variables": {},
+  "resources": [
+    {
+      "name": "[parameters('logicAppName')]",
+      "type": "Microsoft.Logic/workflows",
+      "location": "[parameters('logicAppLocation')]",
+      "tags": {
+        "displayName": "LogicApp"
+      },
+      "apiVersion": "2016-06-01",
+      "properties": {
+        "definition": {
+          "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+          "actions": {
+            "Post_Message": {
+              "type": "ApiConnection",
+              "inputs": {
+                "host": {
+                  "api": {
+                    "runtimeUrl": "https://logic-apis-westeurope.azure-apim.net/apim/slack"
+                  },
+                  "connection": {
+                    "name": "@parameters('$connections')['slack']['connectionId']"
+                  }
+                },
+                "method": "post",
+                "path": "/chat.postMessage",
+                "queries": {
+                  "channel": "azurealerts",
+                  "text": "@{triggerBody()?['data']?['context']?['activityLog']?['authorization']?['action']}@{triggerBody()?['data']?['context']?['activityLog']?['subscriptionId']}@{triggerBody()?['data']?['context']?['activityLog']?['resourceId']}@{triggerBody()?['data']?['context']?['activityLog']?['caller']}"
+                }
+              },
+              "runAfter": {}
+            }
+          },
+          "parameters": {
+            "$connections": {
+              "defaultValue": {},
+              "type": "Object"
+            }
+          },
+          "triggers": {
+            "manual": {
+              "type": "Request",
+              "kind": "Http",
+              "inputs": {
+                "schema": {
+                  "$schema": "http://json-schema.org/draft-04/schema#",
+                  "definitions": {},
+                  "id": "http://example.com/example.json",
+                  "properties": {
+                    "data": {
+                      "id": "/properties/data",
+                      "properties": {
+                        "context": {
+                          "id": "/properties/data/properties/context",
+                          "properties": {
+                            "activityLog": {
+                              "id": "/properties/data/properties/context/properties/activityLog",
+                              "properties": {
+                                "authorization": {
+                                  "id": "/properties/data/properties/context/properties/activityLog/properties/authorization",
+                                  "properties": {
+                                    "action": {
+                                      "id": "/properties/data/properties/context/properties/activityLog/properties/authorization/properties/action",
+                                      "type": "string"
+                                    },
+                                    "scope": {
+                                      "id": "/properties/data/properties/context/properties/activityLog/properties/authorization/properties/scope",
+                                      "type": "string"
+                                    }
+                                  },
+                                  "type": "object"
+                                },
+                                "caller": {
+                                  "id": "/properties/data/properties/context/properties/activityLog/properties/caller",
+                                  "type": "string"
+                                },
+                                "channels": {
+                                  "id": "/properties/data/properties/context/properties/activityLog/properties/channels",
+                                  "type": "string"
+                                },
+                                "claims": {
+                                  "id": "/properties/data/properties/context/properties/activityLog/properties/claims",
+                                  "type": "string"
+                                },
+                                "correlationId": {
+                                  "id": "/properties/data/properties/context/properties/activityLog/properties/correlationId",
+                                  "type": "string"
+                                },
+                                "description": {
+                                  "id": "/properties/data/properties/context/properties/activityLog/properties/description",
+                                  "type": "string"
+                                },
+                                "eventDataId": {
+                                  "id": "/properties/data/properties/context/properties/activityLog/properties/eventDataId",
+                                  "type": "string"
+                                },
+                                "eventSource": {
+                                  "id": "/properties/data/properties/context/properties/activityLog/properties/eventSource",
+                                  "type": "string"
+                                },
+                                "eventTimestamp": {
+                                  "id": "/properties/data/properties/context/properties/activityLog/properties/eventTimestamp",
+                                  "type": "string"
+                                },
+                                "httpRequest": {
+                                  "id": "/properties/data/properties/context/properties/activityLog/properties/httpRequest",
+                                  "type": "string"
+                                },
+                                "level": {
+                                  "id": "/properties/data/properties/context/properties/activityLog/properties/level",
+                                  "type": "string"
+                                },
+                                "operationId": {
+                                  "id": "/properties/data/properties/context/properties/activityLog/properties/operationId",
+                                  "type": "string"
+                                },
+                                "operationName": {
+                                  "id": "/properties/data/properties/context/properties/activityLog/properties/operationName",
+                                  "type": "string"
+                                },
+                                "properties": {
+                                  "id": "/properties/data/properties/context/properties/activityLog/properties/properties",
+                                  "properties": {
+                                    "requestbody": {
+                                      "id": "/properties/data/properties/context/properties/activityLog/properties/properties/properties/requestbody",
+                                      "type": "string"
+                                    }
+                                  },
+                                  "type": "object"
+                                },
+                                "resourceGroupName": {
+                                  "id": "/properties/data/properties/context/properties/activityLog/properties/resourceGroupName",
+                                  "type": "string"
+                                },
+                                "resourceId": {
+                                  "id": "/properties/data/properties/context/properties/activityLog/properties/resourceId",
+                                  "type": "string"
+                                },
+                                "resourceProviderName": {
+                                  "id": "/properties/data/properties/context/properties/activityLog/properties/resourceProviderName",
+                                  "type": "string"
+                                },
+                                "resourceType": {
+                                  "id": "/properties/data/properties/context/properties/activityLog/properties/resourceType",
+                                  "type": "string"
+                                },
+                                "status": {
+                                  "id": "/properties/data/properties/context/properties/activityLog/properties/status",
+                                  "type": "string"
+                                },
+                                "subStatus": {
+                                  "id": "/properties/data/properties/context/properties/activityLog/properties/subStatus",
+                                  "type": "string"
+                                },
+                                "submissionTimestamp": {
+                                  "id": "/properties/data/properties/context/properties/activityLog/properties/submissionTimestamp",
+                                  "type": "string"
+                                },
+                                "subscriptionId": {
+                                  "id": "/properties/data/properties/context/properties/activityLog/properties/subscriptionId",
+                                  "type": "string"
+                                }
+                              },
+                              "type": "object"
+                            }
+                          },
+                          "type": "object"
+                        },
+                        "properties": {
+                          "id": "/properties/data/properties/properties",
+                          "properties": {},
+                          "type": "object"
+                        },
+                        "status": {
+                          "id": "/properties/data/properties/status",
+                          "type": "string"
+                        }
+                      },
+                      "type": "object"
+                    },
+                    "schemaId": {
+                      "id": "/properties/schemaId",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "contentVersion": "1.0.0.0",
+          "outputs": {}
+        },
+        "parameters": {
+          "$connections": {
+            "value": {
+              "slack": {
+                "id": "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', parameters('logicAppLocation'), '/managedApis/', 'slack')]",
+                "connectionId": "[resourceId('Microsoft.Web/connections', parameters('slack_1_Connection_Name'))]",
+                "connectionName": "[parameters('slack_1_Connection_Name')]"
+              }
+            }
+          }
+        }
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Web/connections', parameters('slack_1_Connection_Name'))]"
+      ]
+    },
+    {
+      "type": "MICROSOFT.WEB/CONNECTIONS",
+      "apiVersion": "2016-06-01",
+      "name": "[parameters('slack_1_Connection_Name')]",
+      "location": "[parameters('logicAppLocation')]",
+      "properties": {
+        "api": {
+          "id": "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', parameters('logicAppLocation'), '/managedApis/', 'slack')]"
+        },
+        "displayName": "[parameters('slack_1_Connection_DisplayName')]"
+      }
+    }
+  ],
+  "outputs": {}
+}
